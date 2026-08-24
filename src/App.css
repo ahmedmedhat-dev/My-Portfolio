@@ -1,53 +1,60 @@
-/* ////////////// header //////////////// */
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
 
 .navigation-bar {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #000;
   transition: background-color 0.5s ease;
 }
 
 .navigation-bar.scrolled {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
+/* Navbar toggler */
 .navbar-toggler-icon {
-  background-image: none;
   position: relative;
   width: 23px;
   height: 18px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  background-image: none;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .navbar-toggler-icon::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 6px;
+  left: 0;
   width: 23px;
-  border-top: 2px solid white;
+  border-top: 2px solid #fff;
 }
 
+/* Navbar links */
 #icon-links ul li a span {
   position: relative;
-  overflow: hidden;
-  background-color: transparent;
-  color: white;
   z-index: 0;
+  overflow: hidden;
+
+  color: #fff;
+  background-color: transparent;
 }
 
 #icon-links ul li a span::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: white;
+  z-index: -1;
+
+  background-color: #fff;
   border-radius: inherit;
+
   transform: scale(0);
   transition: transform 0.8s ease;
-  z-index: -1;
 }
 
 #icon-links ul li a span:hover {
-  color: black !important;
+  color: #000 !important;
   border-color: transparent !important;
 }
 
@@ -55,28 +62,33 @@
   transform: scale(1);
 }
 
+/* Connect button */
 #connect-btn {
   position: relative;
-  overflow: hidden;
-  background-color: transparent;
-  color: white;
   z-index: 0;
+  overflow: hidden;
+
+  color: #fff;
+  background-color: transparent;
 }
 
 #connect-btn::before {
   content: "";
   position: absolute;
-  height: 100%;
-  width: 0;
   top: 0;
   left: 0;
-  background: white;
-  transition: width 0.2s ease;
   z-index: -1;
+
+  width: 0;
+  height: 100%;
+
+  background-color: #fff;
+
+  transition: width 0.2s ease;
 }
 
 #connect-btn:hover {
-  color: black !important;
+  color: #000 !important;
   border-color: transparent !important;
 }
 
@@ -84,31 +96,260 @@
   width: 100%;
 }
 
-/* /////////// hero ///////////// */
 
-/* Welcome-section */
+/* =========================================================
+   HERO / WELCOME SECTION
+   ========================================================= */
+
 #wallpaper {
-  background: url(./assets/images/space_background.png);
+  min-height: 100vh;
+
+  background-image: url("./assets/images/space_background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100vh;
 }
 
 .welcome-span {
-  background: linear-gradient(90deg, #6c2368 0%, #3e1b6d 100%);
+  background: linear-gradient(90deg,
+      #6c2368 0%,
+      #3e1b6d 100%);
 }
 
 .welcome-span+h2 {
   font-size: 55px;
 }
 
+/* Astronaut */
 #astronout {
   width: min(450px, 95%);
+
   animation:
     zoomIn 1s ease,
     zigzag 3s 1s linear infinite;
 }
+
+
+/* =========================================================
+   SKILLS SECTION
+   ========================================================= */
+
+.skills-section {
+  background: linear-gradient(135deg,
+      #521650 0%,
+      #240d27 20%,
+      #141315 50%);
+}
+
+/* Circular progress */
+.progress-circle {
+  position: relative;
+  width: 100%;
+  height: 160px;
+}
+
+.progress-circle svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+/* =========================================================
+   SWIPER
+   ========================================================= */
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  width: 40px !important;
+  height: 40px !important;
+  padding: 10px;
+
+  color: #000;
+  background-color: #ffffffa4;
+  border-radius: 50%;
+}
+
+.swiper .swiper-button-next {
+  right: 50px;
+}
+
+.swiper .swiper-button-prev {
+  left: 50px;
+}
+
+
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
+
+/* ---------- Project partition ---------- */
+
+.partition {
+  position: relative;
+  overflow: hidden;
+}
+
+.partition::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  width: 0;
+
+  background: linear-gradient(90deg,
+      #6c2368 0%,
+      #3e1b6d 100%);
+
+  border-radius: inherit;
+}
+
+.partition.active::after {
+  animation: leftToRight 0.2s linear forwards;
+}
+
+.partition.inactive::after {
+  animation: rightToLeft 0.2s linear forwards;
+}
+
+
+/* ---------- Project cards ---------- */
+
+.card-item {
+  aspect-ratio: 16 / 10;
+}
+
+.card-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-item .overlay {
+  background: linear-gradient(90deg,
+      #6c2368e7 0%,
+      #3e1b6dd0 100%);
+
+  transform: scaleY(0);
+  transform-origin: top;
+
+  transition: transform 0.2s ease;
+}
+
+.card-item:hover .overlay {
+  transform: scaleY(1);
+}
+
+
+/* =========================================================
+   GET IN TOUCH SECTION
+   ========================================================= */
+
+.GetInTouch_section {
+  margin-top: 2rem;
+  padding-bottom: 200px !important;
+
+  background: linear-gradient(90deg,
+      #6c2368 0%,
+      #3e1b6d 100%);
+}
+
+
+/* ---------- Image animation ---------- */
+
+.image-normal {
+  transform: scale(1);
+}
+
+.image-enter {
+  animation: zoomIn 0.8s ease forwards;
+}
+
+
+/* ---------- Contact form ---------- */
+
+.form-box .card-body {
+  input {
+    height: 45px;
+    padding: 0 10px;
+
+    border: 1px solid gray;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: #fff;
+  }
+
+  form {
+    textarea {
+      color: #fff;
+
+      background: rgba(150, 150, 150, 0.2);
+      border: 1px solid gray;
+    }
+  }
+  form {
+    textarea::placeholder {
+      color: #fff;
+    }
+  }
+}
+
+
+/* ---------- Active input ---------- */
+
+.clicked {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.801) !important;
+}
+
+.clicked::placeholder {
+  color: #000 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  background: linear-gradient(135deg,
+      #31174b 0%,
+      #130e1c 40%,
+      #0f0c12 100%);
+}
+
+
+/* ---------- Footer form ---------- */
+
+#form-middle label {
+  border: 1px solid rgb(121, 66, 173) !important;
+}
+
+/*
+  If this is regular CSS, keep the button selector
+  separate instead of nesting it inside label.
+*/
+#form-middle label button {
+  background: linear-gradient(90deg,
+      #9e2a80 0%,
+      #702a9c 50%,
+      #532eaf 100%);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
 
 @keyframes zoomIn {
   from {
@@ -134,95 +375,6 @@
   }
 }
 
-/* skills section */
-.skills-section {
-  background: linear-gradient(135deg, #521650 0%, #240d27 20%, #141315 50%);
-}
-
-.progress-circle {
-  position: relative;
-  width: 100%;
-  height: 160px;
-}
-
-.progress-circle svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.swiper .swiper-button-next,
-.swiper .swiper-button-prev {
-  width: 40px !important;
-  height: 40px !important;
-  padding: 10px;
-  border-radius: 50%;
-  background: #ffffffa4;
-  color: black;
-}
-
-.swiper .swiper-button-next {
-  right: 50px;
-}
-
-.swiper .swiper-button-prev {
-  left: 50px;
-}
-
-/* ////////// projects-section ///////////// */
-
-/* first section  */
-
-.partition {
-  position: relative;
-  overflow: hidden;
-}
-
-.partition::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  width: 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #6c2368 0%, #3e1b6d 100%);
-  z-index: -1;
-}
-
-.partition.active::after {
-  animation: leftToRight 0.2s linear forwards;
-}
-
-.partition.inactive::after {
-  animation: rightToLeft 0.2s linear forwards;
-}
-
-.card-item {
-  aspect-ratio: 16/10;
-}
-
-.card-item img {
-  width: 100%;
-  height: 100%;
-}
-
-.card-item .overlay {
-  background: linear-gradient(90deg, #6c2368e7 0%, #3e1b6dd0 100%);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform .2s ease;
-}
-
-.card-item:hover .overlay {
-  transform: scaleY(1);
-}
-
 @keyframes leftToRight {
   from {
     width: 0;
@@ -243,70 +395,12 @@
   }
 }
 
-/* second section */
-.GetInTouch_section {
-  background: linear-gradient(90deg, #6c2368 0%, #3e1b6d 100%);
-  padding-bottom: 200px !important;
-  margin-top: 2rem;
-}
 
-.image-normal {
-  transform: scale(1);
-}
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-.image-enter {
-  animation: zoomIn 0.8s ease forwards;
-}
-
-.form-box .card-body input::placeholder {
-  color: white;
-}
-
-
-.form-box .card-body input {
-  outline: none;
-  height: 45px;
-  padding: 0 10px;
-  border: 1px solid gray
-}
-
-.clicked {
-  background-color: rgba(255, 255, 255, 0.801) !important;
-  color: black !important;
-}
-
-.clicked::placeholder {
-  color: black !important;
-}
-
-.form-box .card-body form textarea::placeholder {
-  color: white;
-}
-
-.form-box .card-body form textarea {
-  color: white;
-  border: 1px solid gray;
-  background: rgba(150, 150, 150, 0.2);
-}
-
-/* project's last section */
-
-/* footer */
-
-footer {
-  background: linear-gradient(135deg, #31174b 0%, #130e1c 40%, #0f0c12 100%);
-}
-
-#form-middle label {
-  border: 1px solid rgb(121, 66, 173) !important;
-
-  button {
-    background: linear-gradient(90deg, #9e2a80 0%, #702a9c 50%, #532eaf 100%);
-  }
-}
-
-/* /////////////////// responsive ///////////////// */
-
+/* Large screens */
 @media (min-width: 1000px) {
   #next-btn {
     right: 8% !important;
@@ -315,75 +409,12 @@ footer {
   #prev-btn {
     left: 8% !important;
   }
-
-  .GetInTouch-container {
-    flex-direction: row !important;
-  }
-
-  .GetInTouch-container>div {
-    width: 50%;
-  }
 }
 
+
+/* Mobile / tablets */
 @media (max-width: 768px) {
   .swiper-button-button {
     display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .partitions-container>div {
-    border-radius: 0 !important;
-  }
-
-  .skills-section>div {
-    top: -10px !important;
-  }
-
-}
-
-@media (max-width: 300px) {
-  #icon-links ul {
-    flex-direction: column !important;
-  }
-
-  .welcome-span+h2 {
-    font-size: 30px;
-  }
-
-  #wallpaper {
-    min-height: 85vh;
-  }
-
-  #next-btn {
-    right: -20px !important;
-    width: 20px !important;
-    height: 20px !important;
-  }
-
-  #prev-btn {
-    left: -20px !important;
-    width: 20px !important;
-    height: 20px !important;
-  }
-
-  .welcome-section {
-    min-height: 100vh !important;
-  }
-
-  #link-group-2 {
-    flex-direction: column !important;
-  }
-}
-
-@media (max-width: 200px) {
-  .progress-circle+h2 {
-    margin-top: -30px;
-  }
-}
-
-@media (min-width: 768px) {
-  .rounded-md-5 {
-    border-radius: 2.5rem !important;
   }
 }

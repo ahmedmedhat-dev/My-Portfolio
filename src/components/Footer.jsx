@@ -15,7 +15,7 @@ function Footer() {
                             <span className="text-black text-capitalize fs-3 fw-bold">
                                 See My Projects At Once
                                 & leave Here Your E-mail
-                                Address, Yasta
+                                Address 
                             </span>
                         </div>
                         <form id="form-middle" className="flex-fill w-100">
