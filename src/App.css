@@ -31,7 +31,7 @@
 }
 
 /* Navbar links */
-#icon-links ul li a span {
+#link-group-2 a span {
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -40,7 +40,7 @@
   background-color: transparent;
 }
 
-#icon-links ul li a span::before {
+#link-group-2 a span::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -53,12 +53,12 @@
   transition: transform 0.8s ease;
 }
 
-#icon-links ul li a span:hover {
+#link-group-2 a span:hover {
   color: #000 !important;
   border-color: transparent !important;
 }
 
-#icon-links ul li a span:hover::before {
+#link-group-2 a span:hover::before {
   transform: scale(1);
 }
 
