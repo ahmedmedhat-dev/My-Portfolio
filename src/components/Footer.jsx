@@ -43,7 +43,7 @@ function Footer() {
                         </form>
                     </div>
                 </section>
-                <div className="container d-flex flex-column flex-md-row gap-5 justify-content-between align-items-center">
+                <div className="container d-flex flex-column flex-md-row gap-3 justify-content-between align-items-center">
                     <span style={{ fontSize: "45px" }} className="text-white text-capitalize fw-semibold">logo</span>
                     <div className="right-side d-flex flex-column align-items-center align-items-md-end gap-3">
                         <div className="links d-flex gap-2">

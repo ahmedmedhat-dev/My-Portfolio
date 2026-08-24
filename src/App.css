@@ -136,7 +136,7 @@
 
 /* skills section */
 .skills-section {
-  height: 55vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #521650 0%, #240d27 20%, #141315 50%);
 }
 
@@ -295,8 +295,8 @@
 /* footer */
 
 footer {
-  min-height: 30vh;
-  padding: 50px 0px;
+  min-height: 35vh;
+  padding: 20px 0;
   background: linear-gradient(135deg, #31174b 0%, #130e1c 40%, #0f0c12 100%);
 }
 
@@ -310,13 +310,9 @@ footer {
 
 /* /////////////////// responsive ///////////////// */
 
-@media (min-width: 992px) {
-  .GetInTouch-container {
-    flex-direction: row !important;
-  }
-
-  .GetInTouch-container>div {
-    width: 50%;
+@media (min-width: 1300px) {
+  .skills-section {
+    min-height: 60vh;
   }
 }
 
@@ -328,11 +324,24 @@ footer {
   #prev-btn {
     left: 8% !important;
   }
+
+  .GetInTouch-container {
+    flex-direction: row !important;
+  }
+
+  .GetInTouch-container>div {
+    width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
   .swiper-button-button {
     display: none;
+  }
+
+  footer {
+    min-height: 75vh;
+    padding: 10px 0;
   }
 }
 
@@ -340,6 +349,11 @@ footer {
   .partitions-container>div {
     border-radius: 0 !important;
   }
+
+  .skills-section>div {
+    top: -10px !important;
+  }
+
 }
 
 @media (max-width: 300px) {

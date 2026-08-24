@@ -50,8 +50,8 @@ function WelcomeSection() {
                         </span>
 
                         <p
-                            style={{ fontWeight: "bold" }}
-                            className="text-capitalize text-white fs-6"
+                            style={{ fontWeight: "bold", fontSize: "small" }}
+                            className="text-capitalize text-white"
                         >
                             let's connect
 
