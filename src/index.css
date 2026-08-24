@@ -1,0 +1,19 @@
+/* @import "tailwindcss"; */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: var(--navbar-height);
+}
+
+body {
+    background: #000000;
+    overflow-x: hidden;
+}
+
+#section_3 {
+    display: none;
+}
+
