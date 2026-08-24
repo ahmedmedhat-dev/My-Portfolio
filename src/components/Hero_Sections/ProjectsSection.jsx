@@ -37,7 +37,7 @@ function ProjectsSection() {
 
     const animate = useSectionAnimation(sectionRef_2, {
         threshold: 0,
-        rootMargin: "-20% 0px -20% 0px"     
+        rootMargin: "-20% 0px -20% 0px"
     });
 
     const cards = [
@@ -114,7 +114,7 @@ function ProjectsSection() {
                 </div>
             </section>
 
-            <section ref={sectionRef_2} id="section_2" className="GetInTouch_section container-fluid p-5 ">
+            <section ref={sectionRef_2} id="section_2" className="GetInTouch_section container-fluid p-0 p-md-5">
                 <div className="GetInTouch-container d-flex flex-column justify-content-between gap-3 align-items-center">
                     <div className="image text-center">
                         <img className={`w-75 ${animate ? "image-enter" : "image-normal"}`} src={floatingSecondSectionImage} />
@@ -125,23 +125,23 @@ function ProjectsSection() {
                                 <span className="fs-2 text-white fw-semibold text-capitalize">get in touch</span>
                             </div>
                             <div className="card-body flex-fill d-flex flex-column align-items-center py-0">
-                                <div className="w-100 row g-1">
-                                    <div className="col-12 col-sm-6">
+                                <div className="w-100 row g-2">
+                                    <div className="col-6">
                                         <input type="text" placeholder="First Name" className="w-100 text-white" style={{ borderRadius: "15px", background: "rgba(150,150,150,0.2" }} onFocus={(e) => e.currentTarget.classList.add("clicked")} onBlur={(e) => e.currentTarget.classList.remove("clicked")} />
                                     </div>
-                                    <div className="col-12 col-sm-6">
+                                    <div className="col-6">
                                         <input type="text" placeholder="Last Name" className="w-100 text-white" style={{ borderRadius: "15px", background: "rgba(150,150,150,0.2" }} onFocus={(e) => e.currentTarget.classList.add("clicked")} onBlur={(e) => e.currentTarget.classList.remove("clicked")} />
                                     </div>
-                                    <div className="col-12 col-sm-6">
+                                    <div className="col-6">
                                         <input type="email" placeholder="Email Address" className="w-100 text-white" style={{ borderRadius: "15px", background: "rgba(150,150,150,0.2" }} onFocus={(e) => e.currentTarget.classList.add("clicked")} onBlur={(e) => e.currentTarget.classList.remove("clicked")} />
                                     </div>
-                                    <div className="col-12 col-sm-6">
+                                    <div className="col-6">
                                         <input type="text" placeholder="Phone No." className="w-100 text-white" style={{ borderRadius: "15px", background: "rgba(150,150,150,0.2" }} onFocus={(e) => e.currentTarget.classList.add("clicked")} onBlur={(e) => e.currentTarget.classList.remove("clicked")} />
                                     </div>
+                                    <form className="col-12" style={{ aspectRatio: "16/6" }}>
+                                        <textarea style={{ height: "100%", outline: "none", resize: "none"}} placeholder="Message" className="w-100 p-3 rounded-4 fs-6 text-white" onFocus={(e) => e.currentTarget.classList.add("clicked")} onBlur={(e) => e.currentTarget.classList.remove("clicked")} ></textarea>
+                                    </form>
                                 </div>
-                                <form className="mt-1 w-100" style={{ aspectRatio: "16/5" }}>
-                                    <textarea style={{ height: "100%", outline: "none", resize: "none" }} placeholder="Message" className="w-100 p-3 rounded-4 fs-6 text-white" onFocus={(e) => e.currentTarget.classList.add("clicked")} onBlur={(e) => e.currentTarget.classList.remove("clicked")} ></textarea>
-                                </form>
                             </div>
                             <div className="card-footer ms-1 border-0">
                                 <button className="btn btn-default bg-white rounded-0 px-5 py-2 text-black fw-bold">Send</button>

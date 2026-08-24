@@ -7,11 +7,12 @@ function Footer() {
                 <section style={
                     {
                         width: "min(1000px, 100%)",
+                        aspectRatio: "16/4",
                         transform: "translateY(-50%)",
                     }}>
-                    <div className="bg-white w-100 rounded-0 rounded-md-5 p-3 p-md-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+                    <div className="bg-white w-100 rounded-5 h-100 p-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
                         <div className="flex-fill">
-                            <span className="text-black text-capitalize fs-5 fw-bold">
+                            <span className="text-black text-capitalize fs-3 fw-bold">
                                 See My Projects At Once
                                 & leave Here Your E-mail
                                 Address, Yasta
@@ -24,7 +25,7 @@ function Footer() {
                                         outline: "none",
                                         background: "transparent",
                                         paddingRight: "10px",
-                                        fontSize: "small",
+                                        fontSize: "14px",
                                         minWidth: 0,
                                         flex: 1
                                     }}
@@ -69,7 +70,7 @@ function Footer() {
                                 </span>
                             </a>
                         </div>
-                        <span className="d-block text-secondary text-capitalize text-center">-- Copyrights 2016 -- All Rights Reserved here By Islam Mohamed Abdelaziz</span>
+                        <span className="d-block text-secondary text-capitalize text-center">-- Copyrights 2026 -- All Rights Reserved here By Ahmed Medhat Mostafa</span>
                     </div>
                 </div>
             </footer>

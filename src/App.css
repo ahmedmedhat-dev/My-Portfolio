@@ -279,11 +279,11 @@
   color: black !important;
 }
 
-.form-box .card-body>form textarea::placeholder {
+.form-box .card-body form textarea::placeholder {
   color: white;
 }
 
-.form-box .card-body>form textarea {
+.form-box .card-body form textarea {
   color: white;
   border: 1px solid gray;
   background: rgba(150, 150, 150, 0.2);
