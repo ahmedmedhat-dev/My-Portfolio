@@ -3,9 +3,13 @@
 function Footer() {
     return (
         <>
-            <footer className="container-fluid d-flex align-items-end position-relative">
-                <section >
-                    <div className="container position-absolute top-0 bg-white h-75 rounded-0 rounded-md-5 p-3 p-md-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3" style={{ left: "50%", transform: "translate(-50%, -50%)" }}>
+            <footer className="container-fluid d-flex flex-column align-items-center px-3 px-md-5 pb-5">
+                <section style={
+                    {
+                        width: "min(1000px, 100%)",
+                        transform: "translateY(-50%)",
+                    }}>
+                    <div className="bg-white w-100 rounded-0 rounded-md-5 p-3 p-md-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
                         <div className="flex-fill">
                             <span className="text-black text-capitalize fs-5 fw-bold">
                                 See My Projects At Once

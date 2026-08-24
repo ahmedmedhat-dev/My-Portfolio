@@ -49,15 +49,14 @@ function SkillsSection() {
 
     return (
         <>
-            <section id="skills" className="skills-section container-fluid position-relative d-flex justify-content-center">
+            <section id="skills" className="skills-section container-fluid d-flex justify-content-center p-4">
                 <div
-                    className="container text-center rounded-5"
+                    className="container  d-flex flex-column justify-content-center text-center rounded-5"
                     style={{
                         background: "rgb(0, 0, 0)",
                         boxShadow: "0 0 15px rgba(0,0,0,0.5)",
-                        top: "-30px",
-                        position: "absolute",
-                        padding: "75px 50px",
+                        padding: "50px",
+                        transform: "translateY(-15%)",
                     }}
                 >
 

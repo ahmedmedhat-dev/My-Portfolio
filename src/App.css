@@ -136,7 +136,6 @@
 
 /* skills section */
 .skills-section {
-  min-height: 100vh;
   background: linear-gradient(135deg, #521650 0%, #240d27 20%, #141315 50%);
 }
 
@@ -295,8 +294,6 @@
 /* footer */
 
 footer {
-  min-height: 35vh;
-  padding: 20px 0;
   background: linear-gradient(135deg, #31174b 0%, #130e1c 40%, #0f0c12 100%);
 }
 
@@ -309,12 +306,6 @@ footer {
 }
 
 /* /////////////////// responsive ///////////////// */
-
-@media (min-width: 1300px) {
-  .skills-section {
-    min-height: 60vh;
-  }
-}
 
 @media (min-width: 1000px) {
   #next-btn {
@@ -337,11 +328,6 @@ footer {
 @media (max-width: 768px) {
   .swiper-button-button {
     display: none;
-  }
-
-  footer {
-    min-height: 75vh;
-    padding: 10px 0;
   }
 }
 
