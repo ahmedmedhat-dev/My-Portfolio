@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import astronaut  from "../../assets/images/image-transparent-Photoroom.png"
 
 function WelcomeSection() {
+    const typedElement = useRef(null)
     useEffect(() => {
-        const typed = new window.Typed(".input", {
+        const typed = new Typed(typedElement.current , {
             strings: ["Frontend Developer", "UX Designer", "Web Developer"],
             typeSpeed: 400,
             backSpeed: 100,
@@ -36,7 +38,7 @@ function WelcomeSection() {
 
                         <h2 className="text-white text-capitalize my-2">
                             hi! i'm ahmed medhat mostafa,{" "}
-                            <span className="input"></span>
+                            <span ref={typedElement}></span>
                         </h2>
 
                         <span
